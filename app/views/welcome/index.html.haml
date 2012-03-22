@@ -66,6 +66,9 @@
       -if current_group.above_the_fold
         = render :partial => "above_the_fold", :locals => {:expanded => true}
 
+      -if current_group.has_banner
+        = render :partial => "banner", :locals => {:expanded => true}
+
       .clear
 
       -if current_group.has_custom_leaderboard? 
